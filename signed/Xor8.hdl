@@ -11,3 +11,4 @@ CHIP Xor8{
     Xor(a=x[5], b=y, out=out[5]);
     Xor(a=x[6], b=y, out=out[6]);
     Xor(a=x[7], b=y, out=out[7]);
+}

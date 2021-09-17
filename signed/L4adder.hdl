@@ -1,0 +1,7 @@
+CHIP L4adder{
+    IN s20[16],c20[16],s11[16];
+    OUT s30[16],c30[16];
+
+    PARTS:
+    reducer(x=s20,y=s11,z[1..15]=c20[0..14],z[0]=false,sum=s30,carry=c30);
+}

@@ -1,0 +1,7 @@
+CHIP L3adder{
+    IN s10[16],c10[16],c11[16];
+    OUT s20[16],c20[16];
+
+    PARTS:
+    reducer(x=s10,y[1..15]=c10[0..14],y[0]=false,z[1..15]=c11[0..14],z[0]=false,sum=s20,carry=c20);
+}

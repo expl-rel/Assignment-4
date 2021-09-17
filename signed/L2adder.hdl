@@ -1,0 +1,7 @@
+CHIP L2adder{
+    IN c00[16],c01[16],c02[16];
+    OUT s11[16],c11[16];
+
+    PARTS:
+    reducer(x[0]=false,y[0]=false,z[0]=false,x[1..15]=c00[0..14],y[1..15]=c01[0..14],z[1..15]=c02[0..14],sum=s11,carry=c11);
+}

@@ -1,0 +1,24 @@
+CHIP wallacetree{
+    IN x[8],y[8];
+    OUT out[8],of;
+    
+    PARTS:
+    ppgenerator(x=x,y=y,pp0=pp0,pp1=pp1,pp2=pp2,pp3=pp3,pp4=pp4,pp5=pp5,pp6=pp6,pp7=pp7);
+
+    //level 1
+    reducer(x=pp0,y=pp1,z=pp2,sum=s00,carry=c00);
+    reducer(x=pp3,y=pp4,z=pp5,sum=s01,carry=c01);
+    reducer(x=pp6,y=pp7,z[0..14]=false,z[15]=y[7],sum=s02,carry=c02);
+
+    //level 2
+    reducer(x=s00,y=s01,z=s02,sum=s10,carry=c10);
+    L2adder(c00=c00,c01=c01,c02=c02,s11=s11,c11=c11);
+
+    //level 3
+    L3adder(s10=s10,c10=c10,c11=c11,s20=s20,c20=c20);
+
+    //level 4
+    L4adder(s20=s20,c20=c20,s11=s11,s30=s30,c30=c30);
+
+    
+}
