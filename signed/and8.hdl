@@ -1,3 +1,7 @@
+/*
+    gives the product x.yi
+    and the greatest significant bit of x.yi (denoted with'last')
+*/
 CHIP and8{
     IN x[8],yi;
     OUT prod[8],last;
