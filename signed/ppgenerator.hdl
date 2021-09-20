@@ -1,5 +1,5 @@
 /*
-
+ generates 8 16 bit partial products for the product of x and y
 */
 CHIP ppgenerator{
     IN x[8],y[8];
