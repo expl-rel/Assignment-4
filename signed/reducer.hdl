@@ -1,4 +1,5 @@
 /*
+    16 bit 3 to 2 reducer
     this chip takes 3 partial products, adds the corresponding bits in each ppi and returns sum and carry busses
     all 16 additions are done in parallel
 */
@@ -24,5 +25,5 @@ CHIP reducer{
     fulladd(x=x[12],y=y[12],c=z[12],sum=sum[12],carry=carry[13]);
     fulladd(x=x[13],y=y[13],c=z[13],sum=sum[13],carry=carry[14]);
     fulladd(x=x[14],y=y[14],c=z[14],sum=sum[14],carry=carry[15]);
-    fulladd(x=x[15],y=y[15],c=z[15],sum=sum[15],carry=carry[16]);
+  //  fulladd(x=x[15],y=y[15],c=z[15],sum=sum[15],carry=carry[16]);
 }
